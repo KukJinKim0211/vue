@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ssafy.vue.dto.Board;
-
 @RestController
 @RequestMapping("/login")
 @CrossOrigin("*")
@@ -28,10 +26,8 @@ public class LoginController {
 		Map<String, String> map = new HashMap<>();
 		map.put("userid", "ssafy");
 		map.put("username", "김국진");
+		
 		return new ResponseEntity<Map<String, String>>(map, HttpStatus.OK);
 	}
 	
-	public String createJWtoken(Accountinfo accountInfo, Long expireTime) {
-		
-	}
 }
